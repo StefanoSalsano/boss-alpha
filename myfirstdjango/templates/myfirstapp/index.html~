@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <title> BOSS - Boss is Open Source Sdn</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link type="text/css" href="/media/common/css/trac.css" rel="stylesheet">
+    <link type="text/css" href="/media/common/css/wiki.css" rel="stylesheet">
+    <link href="/media/site/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="boss-home">
+      <div id="django-container">
+        <div id="django-header">
+          <h1 id="django-logo"><a href="https://github.com/boss-sdn"><img src="/media/img/site/boss_logo.gif" alt="boss" /></a></h1>
+          
+        <ul id="django-nav-global">
+        <li id="django-active-nav"><a href="/myfirstapp/">Home</a></li>
+        <li><a href="https://github.com/boss-sdn">Documentation</a></li>
+        </ul>
+        </div>
+        <div id="django-billboard">
+          <h2><a href="/">Boss index</a></h2>
+        </div>
+        <div id="django-columnwrap">
+          <div id="django-content-main">
+          <p>
+          {% if latest_poll_list %}
+	       <ul>
+	       {% for poll in latest_poll_list %}
+	           <li><a href="/myfistapp/{{ poll.id }}/">{{ poll.question }}</a></li>
+               {% endfor %}
+               </ul>
+          {% elif pluto %}
+               <p>Pluto is available.</p>
+               <ul>
+	       {% for poll in pluto %}
+	           <li>{{ poll }}</li>
+               {% endfor %}
+               </ul>
+          {% else %}
+               <p>No polls are available.</p>
+          {% endif %}
+          
+	  <br><br><br><br><br><br><br><br><br><br><br><br>
+          </p>
+          </div>
+        </div>
+        <div id="django-footer">
+          <p>© 2013 <a href="https://github.com/boss-sdn">Boss is Open Source SDN</a> 
+          
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

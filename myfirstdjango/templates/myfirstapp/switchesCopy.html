@@ -1,0 +1,58 @@
+{% extends "./index.html" %}
+{% block switches %}
+
+    <div>
+    <pre> <a href="/loadedModules"><h2>Floodlight loaded modules</h2> </a> </pre>
+    </div>
+    <div>
+    <p>
+    <pre>
+    <table border="0" width="1000" cellpadding="2" >
+    <h1> SWITCHES 
+    </h1>
+    <tr>
+    <th align="center"><u>DPID</u></th> <th align="center"><u> ADDRESS </u></th> <th align="center"><u>PORT</u></th>
+<th align="center"><u>MANUFACTURER</u></th>
+    </tr>
+    <tr> 
+    <td width="27%" align="center"> {% for val in dpid %}
+<a href="/"> {{ val }} </a>
+ {% endfor %} </td>    <td width="23%" align="center"> {% for val in addr %}
+{{ val }}
+ {% endfor %}</td>    <td width="25%" align="center"> {% for val in port %}
+{{ val }}
+ {% endfor %}</td>    <td width="25%" align="center"> {% for val in manuf %}
+{{ val }}
+ {% endfor %}</td>
+    </tr>
+    </table>
+    </pre>
+    </p>
+    </div>
+    <div>
+    <p>
+    <pre>
+    <table border="0" width="1000" cellpadding="7">
+    <h1>HOSTS
+    </h1>
+    <tr>
+    <th><u>MAC ADDRESS</u></th><th><u>IP ADDRESS</u></th><th><u>ATTACHED SWITCH'S DPID </u></th><th><u>SWITCH'S PORT</u></th>
+    </tr>
+    <tr>
+    <td width="27%" align="center">{% for val in HMac %}
+<a href="/"> {{ val }} </a>
+ {% endfor %}</td>    <td width="23%" align="center"> {% for val in HIp %}
+{{ val }}
+ {% endfor %}</td>    <td width="25%" align="center"> {% for val in HSwDpid %}
+{{ val }}
+ {% endfor %}</td>    <td width="25%" align="center"> {% for val in HSwPort %}
+{{ val }}
+ {% endfor %}</td>
+    </tr>
+    </table>
+    </pre>
+    </p>
+    </div>
+
+{% endblock switches %}
+

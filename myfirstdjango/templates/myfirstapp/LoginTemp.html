@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+{% extends "./index.html" %}
+
+{% block content %}
+
+<!--
+template for login page that use a form
+-->
+
+
+
+
+
+<!-- IT WORKS-->
+
+
+<div>
+    <form action="/login/" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" />
+        {{message}}
+    </form> 
+</div>
+
+<!--
+<body>
+    <div>
+        <form action="/login/" method="post">{% csrf_token %}
+            {{ form.non_field_errors }}
+            <div>
+                {{ form.username.errors }}
+                <label for="username">Username</label>
+                <input type="text" id="id_username" name="username"  placeholder="username">
+            </div>
+            <div>
+                {{ form.password.errors }}
+                <label for="password"> Password </label>
+                <input type="password" name="password" id="id_password" placeholder="Password">
+            </div> 
+            <input type="submit" value="Submit" />
+            {{ message }}
+        </form> 
+    </div>
+</body>
+-->
+
+
+
+<!--
+<div id="stylized" class="myform">
+-->
+
+
+<!--
+<div> 
+    <body>
+        <form id="id_LoginForm" action="/login/" method = "post"> {% csrf_token %}
+            {{message}}
+            <div>
+                <label for="username">Username</label>
+            </div>
+            <div>
+            <input type="text" id="id_username" name="username"  placeholder="Username">
+            </div>
+            <div>
+                <label for="id_password">Password</label>
+            </div>
+            <div>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <p> <input type="submit" value="SignIn" /> </p>
+        </form>
+    </body>
+</div>
+
+
+
+-->
+
+
+<!--
+<div>
+    <form action="/login/" method="post"> {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.subject.errors }}
+            <label for="id_subject">Username:</label>
+            {{ form.username }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.message.errors }}
+            <label for="id_message">Password:</label>
+            {{ form.password }}
+        </div>
+        <p> <input type="submit" value="SignIn" /> </p>
+    </form>
+</div
+-->
+
+
+
+
+<!--
+the last attempt, for my css
+-->
+
+
+<!--
+<head>
+    <link rel="stylesheet" type="text/css" href="/media/site/style.css" />
+</head>
+<body>
+    <div id="django-formcss">
+<!--
+        <form method="post">
+-->
+<!--
+        <fieldset>
+            <legend>A compact inline form</legend>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <label for="remember">
+            <input id="remember" type="checkbox"> Remember me
+            </label>
+            <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+        </fieldset>
+<!--
+        </form>
+-->
+<!--
+    </div>
+</body>
+-->
+
+{% endblock content %}

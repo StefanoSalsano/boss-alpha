@@ -1,0 +1,1096 @@
+ html {
+    overflow-y: scroll;
+}
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+    margin: 10px;
+    padding: 0;
+}
+body, th, tr {
+    font: 13px Verdana,Arial,'Bitstream Vera Sans',Helvetica,sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: Arial,Verdana,'Bitstream Vera Sans',Helvetica,sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.018em;
+    page-break-after: avoid;
+}
+h1 {
+    font-size: 19px;
+    margin: 0.15em 1em 0.5em 0;
+}
+h2 {
+    font-size: 16px;
+}
+h3 {
+    font-size: 14px;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCBB -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: medium none;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    margin: 2em 0;
+}
+address {
+    font-style: normal;
+}
+img {
+    border: medium none;
+}
+.underline {
+    text-decoration: underline;
+}
+ol.loweralpha {
+    list-style-type: lower-alpha;
+}
+ol.upperalpha {
+    list-style-type: upper-alpha;
+}
+ol.lowerroman {
+    list-style-type: lower-roman;
+}
+ol.upperroman {
+    list-style-type: upper-roman;
+}
+ol.arabic {
+    list-style-type: decimal;
+}
+:link, *:visited {
+    border-bottom: 1px dotted #BBBBBB;
+    color: #BB0000;
+    text-decoration: none;
+}
+:link:hover, *:visited:hover {
+    background-color: #EEEEEE;
+    color: #555555;
+}
+h1 *:link, h1 *:visited, h2 *:link, h2 *:visited, h3 *:link, h3 *:visited, h4 *:link, h4 *:visited, h5 *:link, h5 *:visited, h6 *:link, h6 *:visited {
+    color: inherit;
+}
+.anchor:link, .anchor:visited {
+    border: medium none;
+    color: #D7D7D7;
+    font-size: 0.8em;
+    vertical-align: text-top;
+}
+* > .anchor:link, * > .anchor:visited {
+    visibility: hidden;
+}
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover .anchor, span:hover .anchor {
+    visibility: visible;
+}
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target, span:target {
+    background: none repeat scroll 0 0 #FFFFBB;
+    border-radius: 0.2em 0.2em 0.2em 0.2em;
+    box-shadow: 0.1em 0.1em 0.4em 0.1em #DDDDAA;
+}
+a.ext-link .icon {
+    background: url("../extlink.gif") no-repeat scroll left center transparent;
+    padding-left: 15px;
+}
+a.mail-link .icon {
+    background: url("../envelope.png") no-repeat scroll left center transparent;
+    padding-left: 16px;
+}
+a.trac-rawlink, a.trac-ziplink {
+    background: url("../download.png") no-repeat scroll right center transparent;
+    border-bottom: medium none;
+    padding-right: 16px;
+}
+input, textarea, select {
+    margin: 2px;
+}
+input, select {
+    vertical-align: middle;
+}
+input[type="button"], input[type="submit"], input[type="reset"], button {
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px outset #EEEEEE;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    box-shadow: 0.1em 0.1em 0.4em 0 #888888;
+    color: #222222;
+    cursor: pointer;
+    padding: 0.1em 0.5em 0.2em;
+    text-shadow: 0.1em 0.1em #DDDDDD;
+}
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background: none repeat scroll 0 0 #F6F6F6;
+    box-shadow: 0.1em 0.1em 0.6em 0 #999999;
+    text-shadow: 0.1em 0.1em #FCFCFC;
+}
+input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active {
+    left: 0.1em;
+    position: relative;
+    top: 0.1em;
+}
+input[type="button"][disabled], input[type="submit"][disabled], input[type="reset"][disabled] {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-style: solid;
+    color: #999999;
+}
+input[type="text"], input.textwidget, textarea {
+    border: 1px solid #D7D7D7;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+}
+input[type="text"], input.textwidget {
+    padding: 0.25em 0.5em;
+}
+input[type="text"]:focus, input.textwidget:focus, textarea:focus {
+    border: 1px solid #888866;
+}
+option {
+    border-bottom: 1px dotted #D7D7D7;
+}
+fieldset {
+    background: none repeat scroll 0 0 #F7F7F0;
+    border: 1px solid #D7D7D7;
+    border-radius: 0.4em 0.4em 0.4em 0.4em;
+    box-shadow: 0.1em 0.1em 1em 0 #E7E7E7 inset;
+    margin: 1em 0;
+    padding: 1em;
+}
+p.hint, span.hint {
+    color: #666666;
+    font-size: 85%;
+    font-style: italic;
+    margin: 0.5em 0;
+    padding-left: 1em;
+}
+legend {
+    color: #999999;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 0.6em;
+    padding: 0 0.25em;
+}
+label.disabled {
+    color: #D7D7D7;
+}
+.buttons {
+    margin: 0.5em 0.5em 0.5em 0;
+}
+.buttons form, .buttons form div {
+    display: inline;
+}
+.buttons input {
+    margin: 1em 0.5em 0.1em 0;
+}
+.inlinebuttons input {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #DDDDDD;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: none;
+    color: #808080;
+    cursor: pointer;
+    font-size: 70%;
+    height: 1.6em;
+    margin: 0 0.1em 0.1em;
+    padding: 0 0.4em 0.1em;
+}
+.uisymbols .inlinebuttons input[type="button"], .uisymbols .inlinebuttons input[type="submit"] {
+    font-size: 100%;
+}
+.inlinebuttons input[type="button"]:hover, .inlinebuttons input[type="submit"]:hover {
+    background: none repeat scroll 0 0 #F6F6F6;
+    box-shadow: 0.1em 0.1em 0.6em 0 #999999;
+    color: #333333;
+    text-shadow: 0.1em 0.1em #FCFCFC;
+}
+input.trac-delete[type="button"], input.trac-delete[type="submit"] {
+    color: #D31313;
+}
+input.trac-delete[type="button"]:hover, input.trac-delete[type="submit"]:hover {
+    color: #E31313;
+}
+#header hr {
+    display: none;
+}
+#header h1 {
+    margin: 1.5em 0 -1.5em;
+    padding: 0;
+}
+#header img {
+    border: medium none;
+    margin: 0 0 -3em;
+}
+#header *:link, #header *:visited, #header *:link:hover, #header *:visited:hover {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #555555;
+    margin-bottom: 2px;
+    padding: 0;
+}
+#header h1 *:link:hover, #header h1 *:visited:hover {
+    color: #000000;
+}
+#search {
+    clear: both;
+    font-size: 10px;
+    height: 2.2em;
+    margin: 0 0 1em;
+    text-align: right;
+}
+#search input {
+    font-size: 10px;
+}
+#search label {
+    display: none;
+}
+.nav h2, .nav hr {
+    display: none;
+}
+.nav ul {
+    font-size: 10px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+.nav li {
+    border-right: 1px solid #D7D7D7;
+    display: inline-block;
+    padding: 0 0.75em;
+    white-space: nowrap;
+}
+.nav li.last {
+    border-right: medium none;
+}
+#metanav {
+    padding-top: 0.3em;
+}
+#mainnav {
+    border: 1px solid #E4E4E4;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow: 0 0.5em 1.5em #EEEEEE;
+    font: 10px verdana,'Bitstream Vera Sans',helvetica,arial,sans-serif;
+    margin: 0.66em 0 0.33em;
+}
+#mainnav li {
+    background: url("../topbar_gradient.png") repeat scroll 0 0 white;
+    border: 1px solid #E4E4E4;
+    margin: -1px 0.3em 0 -0.4em;
+    padding: 0.3em 0;
+}
+#mainnav .first, #mainnav .first *:link {
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+#mainnav .last, #mainnav .last *:link {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    margin-right: 0;
+}
+#mainnav *:link, #mainnav *:visited {
+    border-bottom: medium none;
+    box-shadow: 0 0.1em 0.3em 0 #999999;
+    color: #000000;
+    padding: 0.3em 20px;
+}
+#mainnav li:hover {
+    border: 1px solid #666666;
+}
+#mainnav *:link:hover, #mainnav *:visited:hover {
+    background: url("../topbar_gradient2.png") repeat-x scroll 0 0 #000000;
+    box-shadow: 0 0.1em 0.6em 0 #666666;
+    color: #EEEEEE;
+}
+#mainnav .active {
+    border: 1px solid #666666;
+}
+#mainnav .active *:link, #mainnav .active *:visited {
+    background: url("../topbar_gradient2.png") repeat-x scroll 0 0 #000000;
+    color: #EEEEEE;
+    text-shadow: 1px 0 #EEEEEE;
+}
+#ctxtnav {
+    min-height: 1em;
+    padding: 0.4em 0;
+}
+#ctxtnav li ul {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid;
+    color: #CCCCCC;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+#ctxtnav li li {
+    padding: 0;
+}
+#ctxtnav li li *:link, #ctxtnav li li *:visited {
+    padding: 0 1em;
+}
+#ctxtnav li li *:link:hover, #ctxtnav li li *:visited:hover {
+    background: none repeat scroll 0 0 #BBBBAA;
+    color: #FFFFFF;
+}
+.trac-nav, .trac-topnav {
+    float: right;
+    font-size: 80%;
+}
+.trac-topnav {
+    margin-top: 14px;
+}
+#altlinks {
+    clear: both;
+    margin-top: 0.4em;
+    text-align: center;
+}
+#altlinks h3 {
+    font-size: 12px;
+    letter-spacing: normal;
+    margin: 0;
+}
+#altlinks ul {
+    list-style: none outside none;
+    margin: 0;
+}
+#altlinks li {
+    border-right: 1px solid #D7D7D7;
+    display: inline;
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 0 1em;
+    white-space: nowrap;
+}
+#altlinks li.last {
+    border-right: medium none;
+}
+#altlinks li *:link, #altlinks li *:visited {
+    background-repeat: no-repeat;
+    border: medium none;
+    color: #666666;
+    padding: 0 0 2px;
+}
+#altlinks li a.ics {
+    background: url("../ics.png") no-repeat scroll left center transparent;
+    padding-left: 22px;
+}
+#altlinks li a.rss {
+    background: url("../feed.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+}
+#footer {
+    clear: both;
+    color: #BBBBBB;
+    font-size: 10px;
+    height: 31px;
+    padding: 0.25em 0;
+}
+#footer *:link, #footer *:visited {
+    color: #BBBBBB;
+}
+#footer hr {
+    display: none;
+}
+#footer #tracpowered {
+    border: 0 none;
+    float: left;
+}
+#footer #tracpowered:hover {
+    background: none repeat scroll 0 0 transparent;
+}
+#footer p {
+    margin: 0;
+}
+#footer p.left {
+    border-left: 1px solid #D7D7D7;
+    border-right: 1px solid #D7D7D7;
+    float: left;
+    margin-left: 1em;
+    padding: 0 1em;
+}
+#footer p.right {
+    float: right;
+    text-align: right;
+}
+#content {
+    position: relative;
+}
+div.trac-content {
+    border: 1px solid #E4E4E4;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow: 0.2em 0.3em 1.5em #EEEEEE;
+    margin: 0.3em auto;
+    padding: 0.5em 1em;
+}
+.uinohelp #help {
+    display: none;
+}
+#help {
+    clear: both;
+    color: #999999;
+    font-size: 90%;
+    margin: 1em;
+    text-align: right;
+}
+#help *:link, #help *:visited {
+    cursor: help;
+}
+#help hr {
+    display: none;
+}
+.foldable *:link, .foldable *:visited {
+    background: url("../expanded.png") no-repeat scroll 4px 50% transparent;
+    border: medium none;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    box-shadow: 0.1em 0.1em 0.3em 0 #BBBBBB;
+    color: #222222;
+    padding: 0.3em 0.5em 0.3em 20px;
+    text-shadow: 0.1em 0.1em #FCFCFC;
+}
+.foldable *:link:hover, .foldable *:visited:hover {
+    background-color: transparent;
+}
+.collapsed > .foldable *:link, .collapsed > .foldable *:visited {
+    background-image: url("../collapsed.png");
+}
+.collapsed > div, .collapsed > table, .collapsed > ul, .collapsed > dl {
+    display: none;
+}
+fieldset > legend.foldable *:link, fieldset > legend.foldable *:visited {
+    color: #666666;
+    font-size: 110%;
+    text-shadow: 0.1em 0.1em #DDDDDD;
+}
+.collapsed legend.foldable {
+    background: none repeat scroll 0 0 white;
+}
+h2 .trac-count, h3 .trac-count {
+    color: #999999;
+    font-size: 90%;
+    font-weight: normal;
+    margin-left: 0.2em;
+    vertical-align: baseline;
+}
+#prefs {
+    background: none repeat scroll 0 0 #F7F7F0;
+    border: 1px outset #EEEEEE;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: 0.2em 0.2em 0.7em 0 #777777;
+    float: right;
+    font-size: 9px;
+    margin: 0 1em 1em;
+    padding: 0.8em;
+    position: relative;
+}
+* html #prefs {
+    width: 26em;
+}
+#prefs input, #prefs select {
+    font-size: 9px;
+    vertical-align: middle;
+}
+#prefs fieldset {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    box-shadow: none;
+    margin: 0.5em;
+    padding: 0;
+}
+#prefs fieldset legend {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font-size: 9px;
+    font-weight: normal;
+    margin: 0 0 0 -1.5em;
+    padding: 0;
+}
+#prefs .buttons {
+    text-align: right;
+}
+#info {
+    background: none repeat scroll 0 0 #F7F7F0;
+    border: 1px solid #D7D7D7;
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin: 1em 0 0;
+    width: 100%;
+}
+#info th, #info td {
+    font-size: 85%;
+    padding: 2px 0.5em;
+    vertical-align: top;
+}
+#info th {
+    font-weight: bold;
+    text-align: left;
+}
+#info td.message {
+    width: 100%;
+}
+#info .message ul {
+    margin: 0 2em;
+    padding: 0;
+}
+#info .message p {
+    margin: 0;
+    padding: 0;
+}
+a.trac-diff:after {
+    content: "∆";
+}
+.wikipage {
+    padding-left: 18px;
+}
+.wikipage h1, .wikipage h2, .wikipage h3 {
+    margin-left: -18px;
+}
+.wikipage table h1, .wikipage table h2, .wikipage table h3 {
+    margin-left: 0;
+}
+div.compact > p:first-child {
+    margin-top: 0;
+}
+div.compact > p:last-child {
+    margin-bottom: 0;
+}
+a.missing:link, a.missing:visited, a.missing, span.missing, a.forbidden, span.forbidden {
+    color: #999988;
+}
+a.missing:hover {
+    color: #000000;
+}
+a.closed:link, a.closed:visited, span.closed {
+    text-decoration: line-through;
+}
+.important {
+    background: none repeat scroll 0 0 #FFCCBB;
+    border: 1px dotted #DD0000;
+    color: #550000;
+    margin: 0.5em;
+    padding: 0 0.5em;
+}
+dl.wiki dt {
+    font-weight: bold;
+}
+dl.compact dt {
+    float: left;
+    padding-right: 0.5em;
+}
+dl.compact dd {
+    margin: 0;
+    padding: 0;
+}
+pre.wiki, pre.literal-block {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #D7D7D7;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    box-shadow: 0 0 1em #EEEEEE;
+    margin: 1em 1.75em;
+    overflow: auto;
+    padding: 0.25em;
+}
+tt {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #EEDDCC;
+    border-radius: 0.25em 0.25em 0.25em 0.25em;
+    color: #660000;
+    padding: 0 0.3em;
+}
+blockquote.citation {
+    border-color: #BB4444;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    margin: -0.6em 0;
+    padding-left: 0.5em;
+}
+.citation blockquote.citation {
+    border-color: #44BB44;
+}
+.citation .citation blockquote.citation {
+    border-color: #4444BB;
+}
+.citation .citation .citation blockquote.citation {
+    border-color: #CC5555;
+}
+table.wiki {
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 0 1em #EEEEEE;
+}
+table.wiki td {
+    border: 1px solid #CCCCCC;
+    padding: 0.1em 0.25em;
+}
+table.wiki th {
+    background-color: #F7F7F7;
+    border: 1px solid #BBBBBB;
+    padding: 0.1em 0.25em;
+}
+.wikitoolbar {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #D7D7D7;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    height: 18px;
+    margin-left: 2px;
+    margin-top: 0.3em;
+    width: 234px;
+}
+.wikitoolbar *:link, .wikitoolbar *:visited {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../edit_toolbar.png") no-repeat scroll 0 0 transparent;
+    border-color: #FFFFFF #FFFFFF #FFFFFF #D7D7D7;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    display: block;
+    float: left;
+    height: 16px;
+    width: 24px;
+}
+.wikitoolbar *:link:hover, .wikitoolbar *:visited:hover {
+    background-color: transparent;
+    border: 1px solid #FFBB22;
+}
+.wikitoolbar a#em {
+    background-position: 0 0;
+}
+.wikitoolbar a#strong {
+    background-position: 0 -16px;
+}
+.wikitoolbar a#heading {
+    background-position: 0 -32px;
+}
+.wikitoolbar a#link {
+    background-position: 0 -48px;
+}
+.wikitoolbar a#code {
+    background-position: 0 -64px;
+}
+.wikitoolbar a#hr {
+    background-position: 0 -80px;
+}
+.wikitoolbar a#np {
+    background-position: 0 -96px;
+}
+.wikitoolbar a#br {
+    background-position: 0 -112px;
+}
+.wikitoolbar a#img {
+    background-position: 0 -128px;
+}
+div.trac-resizable {
+    display: table;
+    width: 1px;
+}
+div.trac-resizable > div {
+    display: table-cell;
+}
+div.trac-resizable textarea {
+    display: block;
+    margin-bottom: 0;
+}
+div.trac-grip {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../grip.png") no-repeat scroll center 1px #EEEEEE;
+    border-color: #DDDDDD;
+    border-image: none;
+    border-right: 1px solid #DDDDDD;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    cursor: s-resize;
+    height: 5px;
+    overflow: hidden;
+}
+#attachment .field {
+    margin-top: 1.3em;
+}
+#attachment label {
+    padding-left: 0.2em;
+}
+#attachment fieldset {
+    margin-top: 2em;
+}
+#attachment fieldset .field {
+    float: left;
+    margin: 0 1em 0.5em 0;
+}
+#attachment .options {
+    float: left;
+    padding: 0 0 1em 1em;
+}
+#attachment br {
+    clear: left;
+}
+.attachment #preview {
+    margin-top: 1em;
+}
+#attachments > div.attachments {
+    padding: 0 0 1em 1em;
+}
+#attachments dl.attachments {
+    margin-left: 2em;
+    padding: 0;
+}
+#attachments dt {
+    display: list-item;
+    list-style: square outside none;
+}
+#attachments dd {
+    font-style: italic;
+    margin-left: 0;
+    padding-left: 0;
+}
+#attachments p {
+    color: #666666;
+    font-size: 90%;
+    margin-left: 2em;
+}
+#attachments > div.attachments > p {
+    float: right;
+    margin: 0.4em 0;
+}
+table.listing {
+    border-bottom: 1px solid #D7D7D7;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0.2em 0.3em 1.5em #EEEEEE;
+    clear: both;
+    margin-top: 1em;
+    width: 100%;
+}
+table.listing th {
+    font-size: 12px;
+    padding: 0 1em 0.1em 0;
+    text-align: left;
+}
+table.listing thead tr {
+    background: none repeat scroll 0 0 #F7F7F0;
+}
+table.listing thead th {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #D7D7D7 #D7D7D7 #999999;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 0.5em;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+table.listing thead th *:link:hover, table.listing thead th *:visited:hover {
+    background-color: transparent;
+}
+table.listing thead th a {
+    border: medium none;
+    padding-right: 12px;
+}
+table.listing th.asc a, table.listing th.desc a {
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+table.listing th.asc a {
+    background-image: url("../asc.png");
+}
+table.listing th.desc a {
+    background-image: url("../desc.png");
+}
+table.listing tbody td, table.listing tbody th {
+    border: 1px dotted #DDDDDD;
+    padding: 0.3em 0.5em;
+    vertical-align: top;
+}
+table.listing tbody td a:hover, table.listing tbody th a:hover {
+    background-color: transparent;
+}
+table.listing tbody tr {
+    border-top: 1px solid #DDDDDD;
+}
+table.listing tbody tr.even {
+    background-color: #FCFCFC;
+}
+table.listing tbody tr.odd {
+    background-color: #F7F7F7;
+}
+table.listing tbody tr:hover {
+    background: none repeat scroll 0 0 #EEEEDD !important;
+}
+table.listing tbody tr.focus {
+    background: none repeat scroll 0 0 #DDDDFF !important;
+}
+table.listing pre {
+    white-space: pre-wrap;
+}
+#fieldhist td {
+    padding: 0 0.5em;
+}
+#fieldhist td.date, #fieldhist td.diff, #fieldhist td.version, #fieldhist td.author {
+    white-space: nowrap;
+}
+#fieldhist td.version {
+    text-align: center;
+}
+#fieldhist td.comment {
+    width: 100%;
+}
+.suggestions {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #888866;
+    color: #222222;
+}
+.suggestions ul {
+    font-family: sans-serif;
+    list-style: none outside none;
+    margin: 0;
+    max-height: 20em;
+    min-height: 3em;
+    overflow: auto;
+    padding: 0;
+    width: 440px;
+}
+* html .suggestions ul {
+    height: 10em;
+}
+.suggestions li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+.suggestions li.selected {
+    background: none repeat scroll 0 0 #B9B9B9;
+}
+#content.error .message, div.system-message {
+    background: none repeat scroll 0 0 #FFDDCC;
+    border: 2px solid #DD0000;
+    color: #550000;
+    margin: 1em 0;
+    padding: 0.5em;
+}
+#content.error div.message pre, div.system-message pre {
+    margin-left: 1em;
+    overflow: hidden;
+    white-space: normal;
+}
+div.system-message p {
+    margin: 0;
+}
+div.system-message p.system-message-title {
+    font-weight: bold;
+}
+span.system-message {
+    background: none repeat scroll 0 0 #FFDDCC;
+    border-radius: 0.25em 0.25em 0.25em 0.25em;
+    float: left;
+    margin: 1px;
+    padding: 0.2em;
+}
+div.system-message {
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow: 0.2em 0.2em 0.7em 0 #777777;
+}
+#warning.system-message, .warning.system-message {
+    background: none repeat scroll 0 0 #FFFFBB;
+    border: 1px solid #550000;
+}
+#warning.system-message li {
+    list-style-type: square;
+}
+#notice.system-message, .notice.system-message {
+    background: none repeat scroll 0 0 #DDFFDD;
+    border: 1px solid #550000;
+}
+#notice.system-message li {
+    list-style-type: square;
+}
+div.system-message .trac-close-msg {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #DDDDDD;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: none;
+    color: #D31313;
+    display: none;
+    float: right;
+    font-size: 80%;
+    height: 1.4em;
+    margin: 0 0.1em 0.1em 0;
+    padding: 0 0.4em 0.1em;
+}
+div.system-message .trac-close-msg:hover {
+    background: none repeat scroll 0 0 #F6F6F6;
+    box-shadow: 0.1em 0.1em 0.6em 0 #999999;
+    color: #333333;
+    text-shadow: 0.1em 0.1em #FCFCFC;
+}
+.uisymbols div.system-message .trac-close-msg > span {
+    display: none;
+}
+.uisymbols div.system-message .trac-close-msg:after {
+    content: "x";
+}
+#content.error form.newticket {
+    display: inline;
+}
+#content.error form.newticket textarea {
+    display: none;
+}
+#content.error #systeminfo, #content.error #plugins {
+    margin: 1em;
+    width: auto;
+}
+#content.error #systeminfo th, #content.error #systeminfo td, #content.error #plugins th, #content.error #plugins td {
+    font-size: 90%;
+}
+#content.error #systeminfo th, #content.error #plugins th {
+    background: none repeat scroll 0 0 #F7F7F7;
+    font-weight: bold;
+}
+#content.error #traceback {
+    margin-left: 1em;
+}
+#content.error #traceback *:link, #content.error #traceback *:visited {
+    border: medium none;
+}
+#content.error #tbtoggle {
+    font-size: 80%;
+}
+#content.error #traceback div {
+    margin-left: 1em;
+}
+#content.error #traceback h3 {
+    font-size: 95%;
+    margin: 0.5em 0 0;
+}
+#content.error #traceback *:link var, #content.error #traceback *:visited var {
+    font-family: monospace;
+    font-style: normal;
+    font-weight: bold;
+}
+#content.error #traceback span.file {
+    color: #666666;
+    font-size: 85%;
+}
+#content.error #traceback ul {
+    list-style: none outside none;
+    margin: 0.5em 0;
+    padding: 0;
+}
+#content.error #traceback table.code td {
+    font-size: 90%;
+    white-space: pre;
+}
+#content.error #traceback table.code tr.current td {
+    background: none repeat scroll 0 0 #E6E6E6;
+}
+#content.error #traceback table {
+    margin: 0.5em 0 1em;
+}
+#content.error #traceback th, #content.error #traceback td {
+    font-size: 85%;
+    padding: 1px;
+}
+#content.error #traceback th var {
+    font-family: monospace;
+    font-style: normal;
+}
+#content.error #traceback td code {
+    white-space: pre;
+}
+#content.error #traceback pre {
+    font-size: 95%;
+}
+#content.error #plugins td.file {
+    color: #666666;
+}
+#content .paging {
+    font-size: 85%;
+    line-height: 2em;
+    margin: 0 0 2em;
+    padding: 0.5em 0 0;
+    text-align: center;
+}
+#content .paging .current {
+    background: none repeat scroll 0 0 #999999;
+    border: 1px solid #333333;
+    color: #FFFFFF;
+    padding: 0.1em 0.3em;
+}
+#content .paging *:link, #content .paging *:visited {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #666666;
+    color: #666666;
+    padding: 0.1em 0.3em;
+}
+#content .paging *:link:hover, #content .paging *:visited:hover {
+    background: none repeat scroll 0 0 #999999;
+    border-color: #333333;
+    color: #FFFFFF;
+}
+#content .paging .previous a, #content .paging .next a {
+    border: medium none;
+    font-size: 150%;
+    font-weight: bold;
+}
+#content .paging .previous a:hover, #content .paging .next a:hover {
+    background: none repeat scroll 0 0 transparent;
+    color: #666666;
+}
+#content h2 .numresults {
+    color: #666666;
+    font-size: 90%;
+}
+.searchword0 {
+    background: none repeat scroll 0 0 #FFFF99;
+}
+.searchword1 {
+    background: none repeat scroll 0 0 #CCFFCC;
+}
+.searchword2 {
+    background: none repeat scroll 0 0 #CCFFFF;
+}
+.searchword3 {
+    background: none repeat scroll 0 0 #CCCCFF;
+}
+.searchword4 {
+    background: none repeat scroll 0 0 #FFCCFF;
+}
+#header, #altlinks, #footer, #help, #warning, #notice {
+    display: none;
+}
+.nav, form, .buttons form, form .buttons, form .inlinebuttons, .noprint, .trac-nav, .trac-topnav, #attachments > div.attachments > p {
+    display: none;
+}
+form.printableform {
+    display: block;
+}
+div.code pre {
+    white-space: pre-wrap;
+}
+:link, *:visited {
+    border-bottom: medium none;
+}
+div.trac-content {
+    box-shadow: none;
+}
+.foldable *:link, .foldable *:visited {
+    box-shadow: none;
+    text-shadow: none;
+}

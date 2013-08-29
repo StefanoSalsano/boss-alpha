@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- template for messages about login, logout and registration
+-->
+
+{% extends "./index.html" %}
+
+{% block content %}
+
+<div>
+    <h1> {{ message }} </h1>
+    {% if user.is_authenticated %}
+        <h2> to logout click <a href= /logout> here </a>
+    {% else %}
+        <h2> if you want login again click <a href /login> here </a> </h2>
+    {% endif %}
+</div>
+
+{% endblock content %}

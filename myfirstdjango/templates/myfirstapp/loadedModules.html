@@ -1,0 +1,12 @@
+{% extends "./index.html" %}
+
+{% block loadedModules %}
+
+<div> <h2> {{ nMod }} loaded modules's number </h2>
+<pre>
+{% for val in lMod %}<a>{{ val }}</a>{% endfor %}</td>
+</pre>
+</div>
+    <div> <h3>n.f=net.floodlightcontroller</h3> </div>
+
+{% endblock loadedModules %}

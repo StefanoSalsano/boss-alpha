@@ -1,0 +1,105 @@
+{% extends "./index.html" %}
+{% block SwHo %}
+
+<div>
+    <h1>Floodlight loaded modules</h1>(click <a href= /Boss/FloodlightContrLoadedModules>here</a><a> to see)
+</div>
+
+<br> </br>
+
+<div> <!-- it shows switches info -->
+    <caption>
+        <table border="0" width="1000" cellpadding="2" >
+        <h1> SWITCHES ({{ nSw }}) </h1>
+    </caption>
+    <thead>
+        <tr>
+            <th align="center"><b>DPID</b></th>
+            <th align="center"><b> ADDRESS </b></th>
+            <th align="center"><b>PORT</b></th>
+            <th align="center"><b>MANUFACTURER</b></th>
+        </tr>
+    </thead>
+    <body>
+        <td width="27%" align="center">
+            {% for val in SwDpid %} <a href=/GoSwitch/{{ val }}>
+                {{ val|linebreaks }} </a>
+            {% endfor %} 
+        </td>
+        <td width="23%" align="center">
+            {% for val in SwInfo %}
+                {{ val.SwAdd|linebreaks }}
+            {% endfor %}
+        </td>
+        <td width="25%" align="center">
+            {% for val in SwInfo %}
+                {{ val.SwContrPort|linebreaks }}
+            {% endfor %}
+        </td> 
+        <td width="25%" align="center">
+            {% for val in SwInfo %}
+                {{ val.SwManuf|linebreaks }}
+            {% endfor %}
+        </td>
+    </body>
+        </table>
+</div>
+
+<br></br>
+
+<div> <!-- it shows Host information -->
+    <caption>
+        <table border="0" width="1000" cellpadding="7">
+        <h1> HOSTS ({{nH}}) </h1>
+    </caption>
+    <thead>
+        <tr>
+            <th><b>MAC ADDRESS</b></th>
+            <th><b>IP ADDRESS</b></th>
+            <th><b>ATTACHED SWITCH DPID </b></th>
+            <th><b>SWITCH PORT</b></th>
+        </tr>
+    </thead>
+    <body>
+        <td width="27%" align="center">
+            {% for val in HMac %}
+                {{ val|linebreaks }}
+            {% endfor %}
+        </td>
+        <td width="23%" align="center">
+            {% for val in HInfo %}
+                {{ val.ip|linebreaks }}
+            {% endfor %}
+        </td>
+        <td width="25%" align="center">
+            {% for val in HInfo %}
+                {{ val.SwDpidAtt|linebreaks }}
+            {% endfor %}
+        </td>
+        <td width="25%" align="center">
+            {% for val in HInfo %}
+                {{ val.SwPortAtt|linebreaks }}
+            {% endfor %}
+        </td>
+    </body>
+        </table>
+</div>
+<!--
+below for debug
+-->
+<!--
+<div> 
+    <h1> debug </h1>
+    <h2> session id {{bug1}}</h2>
+    <h2> output
+     {{bug}} </h2> 
+    <h1> len rSwOne.json  {{bug2}} </h1>
+</div>
+-->
+
+
+
+
+
+{% endblock SwHo %}
+

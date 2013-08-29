@@ -1,0 +1,30 @@
+{% extends "./index.html" %}
+{% block switches %}
+
+    <div>
+    <pre> <a><h2>Floodlight loaded modules</h2></a> <a> (click </a><a href= /Boss/FloodlightContrLoadedModules>here</a><a> to see) </a> </pre>
+    </div>
+    <div>
+    <p>
+    <pre>
+    <table border="0" width="1000" cellpadding="2" >
+    <h1> SWITCHES ({{ nSw }})
+    </h1>
+    <tr>
+    <th align="center"><u>DPID</u></th> <th align="center"><u> ADDRESS </u></th> <th align="center"><u>PORT</u></th>
+<th align="center"><u>MANUFACTURER</u></th>
+    </tr>
+    <tr> 
+    <td width="27%" align="center"> {% for val in SwDpid %}
+<a href=/GoSwitch/{{ val }} > {{ val }} </a>
+ {% endfor %} </td> 
+ {% for val in SwInfo %} <td width="23%" align="center">
+ {{ val.SwAdd }}</td>    <td width="25%" align="center"> 
+ {{ val.SwContPort}}</td>    <td width="25%" align="center"> 
+ {{ val.SwManuf }}</td>
+ {% endfor %}
+ </tr>
+ </pre>
+
+
+{% endblock switches %}

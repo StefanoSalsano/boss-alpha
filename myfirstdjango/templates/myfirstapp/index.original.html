@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+  
+
+
+  <head>
+    <title>
+      Django
+    </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/search" />
+        <link rel="help" href="/wiki/TracGuide" />
+        <link rel="alternate" href="/wiki/WikiStart?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="/wiki" />
+        <link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="/search/opensearch" title="Search Django" />
+      <script type="text/javascript" charset="utf-8" src="/chrome/common/js/jquery.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/chrome/common/js/babel.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/chrome/common/js/trac.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/chrome/common/js/search.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/chrome/common/js/folding.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="/chrome/site/style.css" />
+  </head>
+  <body>
+    <div id="django-code">
+      <div id="django-container">
+        <div id="django-header">
+          <h1 id="django-logo"><a href="https://www.djangoproject.com/"><img src="https://www.djangoproject.com/s/img/site/hdr_logo.gif" alt="Django" /></a></h1>
+          <ul id="django-nav-global">
+            <li><a href="https://www.djangoproject.com/">Home</a></li>
+            <li><a href="https://www.djangoproject.com/download/">Download</a></li>
+            <li><a href="https://docs.djangoproject.com/">Documentation</a></li>
+            <li><a href="https://www.djangoproject.com/weblog/">Weblog</a></li>
+            <li><a href="https://www.djangoproject.com/community/">Community</a></li>
+            <li id="django-active-nav"><a href="/">Code</a></li>
+          </ul>
+        </div>
+        <div id="django-billboard">
+          <form id="search" action="/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form> <!-- move the search form up from it's original position -->
+          <h2><a href="/">Code</a></h2>
+        </div>
+        <div id="django-columnwrap">
+          <div id="django-content-main">
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="https://www.djangoproject.com/"><img src="https://www.djangoproject.com/s/img/site/hdr_logo.gif" alt="Django" /></a>
+      </div>
+      <form id="search" action="/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/login">Login</a></li><li><a href="https://www.djangoproject.com/accounts/register/">Register</a></li><li><a href="/prefs">Preferences</a></li><li class="last"><a href="https://www.djangoproject.com/accounts/password/reset/">Forgot your password?</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="/wiki">Wiki</a></li><li><a href="/timeline">Timeline</a></li><li><a href="/wiki/Reports">Reports</a></li><li><a href="/query">View Tickets</a></li><li><a href="/newticket">New Ticket</a></li><li class="last"><a href="/search">Search</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="/wiki">wiki:</a><a class="pathentry" href="/wiki/WikiStart" title="View WikiStart">WikiStart</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class="first"><a href="/wiki/WikiStart">Start Page</a></li><li><a href="/wiki/TitleIndex">Index</a></li><li class="last"><a href="/wiki/WikiStart?action=history">History</a></li>
+        </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          <div id="wikipage" class="trac-content"><h1 id="Djangosource-coderepositorywikiandbug-reportsystem">Django source-code repository, wiki and bug-report system</h1>
+<p>
+Django is available open-source under the <a href="https://code.djangoproject.com/file/django/trunk/LICENSE">BSD license</a>.
+</p>
+<p>
+
+    <ol>
+      <li>
+        <a href="#Gettingthecode">Getting the code</a>
+      </li>
+      <li>
+        <a href="#Browsingthecodeonline">Browsing the code online</a>
+      </li>
+      <li>
+        <a href="#Gettinginvolved">Getting involved</a>
+      </li>
+      <li>
+        <a href="#Branches">Branches</a>
+      </li>
+      <li>
+        <a href="#Descriptionsofmajorchangestothecodebase">Descriptions of major changes to the codebase</a>
+      </li>
+      <li>
+        <a href="#Underdiscussion">Under discussion</a>
+      </li>
+      <li>
+        <a href="#MoreDjangoresources">More Django resources</a>
+      </li>
+    </ol>
+
+</p>
+<h2 id="Gettingthecode">Getting the code</h2>
+<p>
+Django uses <a class="ext-link" href="http://git-scm.com/"><span class="icon">​</span>Git</a> (<tt>git</tt>) for managing its code.
+</p>
+<p>
+Assuming you have Git installed, the following command in a terminal will fetch the most recent code for you:
+</p>
+<pre class="wiki">git clone https://github.com/django/django.git
+</pre><p>
+Django also offers "official" release tarballs at the <a class="ext-link" href="https://www.djangoproject.com/download/"><span class="icon">​</span>download page</a>.
+</p>
+<h2 id="Browsingthecodeonline">Browsing the code online</h2>
+<ul><li><a class="ext-link" href="https://github.com/django/django"><span class="icon">​</span>Browse source</a>: See the full code via a Web interface.
+</li><li><a class="ext-link" href="https://github.com/django/django/commits/master"><span class="icon">​</span>Timeline</a>: Keep track of recent changes.
+</li></ul><h2 id="Gettinginvolved">Getting involved</h2>
+<p>
+Before <em>anything</em>, please read <a class="ext-link" href="https://docs.djangoproject.com/en/stable/internals/contributing/"><span class="icon">​</span>How to contribute to Django</a>.  You'll find out how the Django community works, and possibly save yourself much grief in the future.  <tt>:)</tt>
+</p>
+<ul><li><a href="https://code.djangoproject.com/wiki/Reports">Tickets</a>: View active tickets, make bug reports and contribute feature requests.
+</li><li><a class="wiki" href="/wiki/LittleEasyImprovements">Little, easy improvements</a>: Get your feet wet by taking on one of these small tasks.
+</li><li><a href="https://code.djangoproject.com/query?status=!closed&amp;easy=1">"Easy Pickings" Tickets</a>: Work on simple tickets to get familiar with Django's code base and the contribution process.
+</li><li><a class="ext-link" href="https://docs.djangoproject.com/en/dev/internals/contributing/bugs-and-features/#reporting-security-issues"><span class="icon">​</span>How to report security issues</a>.
+</li><li><a class="wiki" href="/wiki/DjangoDesign">DjangoDesign</a>: Are you a designer rather than a coder? We still want your input. Let us know how we can improve on Django's visual/UX design.
+</li></ul><h2 id="Branches">Branches</h2>
+<p>
+Development of major new features for Django tends to take place in <em>branches</em> — copies of the main codebase focused on a particular feature.  Using branches makes it easier to experiment with such sweeping changes without possibly breaking the <em>trunk</em> — the main line of development.
+</p>
+<p>
+Branches may not be stable, but they offer a chance to test out bleeding-edge code before it hits the mainline.  Give them a try, and remember to send feedback to the branch maintainers!
+</p>
+<p>
+See <a class="wiki" href="/wiki/DjangoBranches">DjangoBranches</a> for more information, including a list of active branches.
+</p>
+<h2 id="Descriptionsofmajorchangestothecodebase">Descriptions of major changes to the codebase</h2>
+<ul><li><a class="wiki" href="/wiki/BackwardsIncompatibleChanges">Backwards-incompatible changes</a>: Comprehensive list of backwards-incompatible changes made since first public release.
+</li></ul><h2 id="Underdiscussion">Under discussion</h2>
+<ul><li><a class="wiki" href="/wiki/BetterErrorMessages">Better error messages</a>: Documenting situations where better error messages would improve the experience of using Django
+</li><li><a class="wiki" href="/wiki/ReplacingGetAbsoluteUrl">Replacing get_absolute_url</a> and generally improving the concept of url-aware models.
+</li></ul><h2 id="MoreDjangoresources">More Django resources</h2>
+<p>
+See the <a class="wiki" href="/wiki/DjangoResources">Django resources page</a> for a cornucopia of unofficial articles, code samples and other information contributed by the community. 
+</p>
+</div>
+          
+          <div class="trac-modifiedby">
+            <span><a href="/wiki/WikiStart?action=diff&amp;version=290" title="Version 290 by aaugustin">Last modified</a> <a class="timeline" href="/timeline?from=2013-02-15T09%3A29%3A30-08%3A00&amp;precision=second" title="See timeline at 02/15/13 09:29:30">2 weeks ago</a></span>
+            <span class="trac-print">Last modified on 02/15/13 09:29:30</span>
+          </div>
+        
+        
+      </div>
+      
+    <div id="attachments">
+    </div>
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/wiki/WikiStart?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/about"><strong>Trac 1.0</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right"></p>
+    </div>
+          </div>
+        </div>
+        <div id="django-footer">
+          <p>© 2005-2012 <a href="https://www.djangoproject.com/foundation/">Django Software Foundation</a> unless otherwise noted. Django is a registered trademark of the Django Software Foundation.
+          <a href="http://mediatemple.net/">Linux Web hosting</a> graciously provided by Media Temple.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

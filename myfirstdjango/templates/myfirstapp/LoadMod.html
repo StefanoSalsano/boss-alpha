@@ -1,0 +1,19 @@
+{% extends "./index.html" %}
+
+{% block LoadMod %}
+
+<div> 
+    <p>
+        <h1> <b> ({{ nMod }}) loaded modules </b> </h2>
+        <br></br>
+        {% for val in lMod %}
+            {{ val|linebreaks }}
+        {% endfor %}
+    </p>
+    <br> </br>
+    <p>
+        <h3>n.f=net.floodlightcontroller</h3>
+    </p>
+</div>
+
+{% endblock LoadMod %}

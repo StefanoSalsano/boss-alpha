@@ -1,0 +1,50 @@
+{% extends "./index.html" %}
+{% block SingleSwitch %}
+
+
+
+
+
+
+    <div>
+    <pre>
+    <table border="4" cellpadding="7">
+    <h1>SWITCH {{dUrl}}</h1>
+    <tr>
+    <th>Port Number</th><th>Name Port</th><th>State</th><th>MAC Address</th><th>Tx Bytes</th><th>Rx Bytes</th><th>Tx Packets</th>
+<th>Rx Packets</th><th>Tx Dropped</th><th>Rx Dropped</th><th>Collisions</th><th>Rx Frame Errors</th>
+    </tr>
+    <tr>
+    <td align="center">{% for val in nsSwPort %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pName }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pState }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pMac }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pTxB }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pRxB }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pTxP }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pRxP }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pTxDrop }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pRxDrop }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pColl }} </a>
+        {% endfor %}</td>    <td align="center">{% for val in SwInfo %}
+<a style="color:{% cycle 'blue' 'black' %}"> {{ val.pRxFrEr }} </a>    
+        {% endfor %}</td>
+    </tr>
+    </table>
+    </pre>
+    </div>
+
+
+{% endblock SingleSwitch %}
+

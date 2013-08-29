@@ -1,0 +1,209 @@
+{% extends "./index.html" %}
+{% block SingleSwitch %}
+
+<div> <!-- it shows single switches info -->
+    <caption>
+        <table border="4" cellpadding="7">
+        <h1>SWITCH {{dUrl}}</h1>
+    </caption>
+    <thead>
+        <tr>
+            <th><b>Port Number</b></th>
+            <th><b>Name Port</b></th>
+            <th><b>State</b></th>
+            <th><b>MAC Address</b></th>
+            <th><b>Tx Bytes</b></th>
+            <th><b>Rx Bytes</b></th>
+            <th><b>Tx Packets</b></th>
+            <th><b>Rx Packets</b></th>
+            <th><b>Tx Dropped</b></th>
+            <th><b>Rx Dropped</b></th>
+            <th><b>Collisions</b></th>
+            <th><b>Rx Frame Errors</b></th>
+        </tr>
+    </thead>
+    <body>
+        <tr>
+            <td align="center">
+                {% for val in nsSwPort %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val|linebreaks }} 
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pName|linebreaks }}
+                </span> {% endfor %}</td>
+            <td align="center"> 
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{val.pState|linebreaks}}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pMac|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pTxB|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pRxB|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pTxP|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pRxP|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pTxDrop|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pRxDrop|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pColl|linebreaks }}
+                </span> {% endfor %}
+            </td>
+            <td align="center">
+                {% for val in SwInfo %} <span style="color:{% cycle 'blue' 'black' %}">
+                    {{ val.pRxFrEr|linebreaks }}
+                </span> {% endfor %}
+            </td>
+        </tr>
+    </body>
+        </table>
+</div>
+<div> <!-- it shows flows info-->
+    <caption>
+        <table border="4" cellpadding="7">
+        <h1>Flow {{nFlow}}</h1>
+    </caption>
+    <thead>
+        <tr>
+            <th rowspan="2"><b>Cookie</b></th>
+            <th rowspan="2"><b>Priority</b></th>
+            <th colspan="5"><b>Match</b></th>
+            <th colspan="2"><b>Action</b></th>
+            <th rowspan="2"><b>Packets</b></th>
+            <th rowspan="2"><b>Bytes</b></th>
+            <th rowspan="2"><b>Age</b></th>
+            <th rowspan="2"><b>TimeOut</b></th>
+        </tr>
+        <tr>
+            <th>Port</th>
+            <th>VLAN</th>
+            <th>Prio</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Type</th>
+            <th>Port</th>
+    </thead>
+    <body>
+        <td align="center" style="color:blue"> 
+            {% for val in flowInfo %}
+                {{ val.fCkie|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fPrio|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fM_port|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fM_vlan|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fM_prio|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fM_src|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fM_dst|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {% for x in val.fA_type %}
+                    {{ x|linebreaks }}
+                {% endfor %}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {% for x in val.fA_port %}
+                    {{ x|linebreaks }}
+                {% endfor %}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fPk|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fB|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fAge|linebreaks }}
+            {% endfor %}
+        </td>
+        <td align="center" style="color:blue">
+            {% for val in flowInfo %}
+                {{ val.fTO|linebreaks }}
+            {% endfor %}
+        </td>
+    </body>
+        </table>
+</div>
+<!--
+below for debug
+-->
+<!--
+<div> 
+    <h1> debug </h1>
+    <h2> session id {{bug1SS}} </h2>
+    <h2> {{bugSS}} </h2> 
+    <a href=/casa> {{dUrl}} </a>
+    
+</div>
+
+-->
+
+
+
+
+
+
+
+{% endblock SingleSwitch %}
+
